@@ -1,4 +1,4 @@
-const series = [
+export const series = [
     {
         id: 1,
         name: "The Sopranos",
@@ -49,4 +49,6 @@ const series = [
         score: 0,
         emmies: 0,
     },
-];
+].map((show) => ({ ...show }));
+
+export const initializeSeries = () => series;

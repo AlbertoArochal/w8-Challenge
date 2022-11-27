@@ -1,4 +1,12 @@
-export class seriesList {}
+export class seriesListPending {}
 
 const template = `
-<p> You have ${} series pending to watch`;
+
+<li class="serie">
+<img
+class="serie-poster"
+src = ${}
+alt = ${} poster 
+/>
+<h4 class = 'serie__title'> ${} 
+</li></ul>`;

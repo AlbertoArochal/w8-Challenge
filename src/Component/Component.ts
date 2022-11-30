@@ -23,8 +23,4 @@ export abstract class Component {
         this.element = e;
         this.element.outerHTML += this.template;
     }
-
-    createTemplate(template: string) {
-        return template;
-    }
 }

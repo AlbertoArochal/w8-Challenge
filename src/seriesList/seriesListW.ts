@@ -3,6 +3,6 @@ import { templateW } from "../templates/templates.js";
 export class seriesListW extends Component {
     constructor() {
         super();
-        this.template = templateW;
+        this.template = templateW();
     }
 }

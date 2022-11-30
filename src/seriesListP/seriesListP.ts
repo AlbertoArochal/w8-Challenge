@@ -4,5 +4,5 @@ export class seriesList extends Component {
     constructor() {
         super();
     }
-    template = templateP;
+    template = templateP();
 }

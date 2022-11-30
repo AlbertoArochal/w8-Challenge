@@ -5,7 +5,7 @@ export class seriesC extends Component {
     constructor() {
         super();
     }
-    template = templateL;
+    template = templateL();
 }
 
 /*HandleStar = (selector: string) => {

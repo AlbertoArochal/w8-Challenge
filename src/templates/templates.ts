@@ -1,6 +1,6 @@
 let esto = "pendientes";
-let show = "";
-export const templateP = `
+export const templateP = () => {
+    return `
     <section class = "series-pending">
     <h3> Pending Series </h3>
     <p> You have ${esto} series pending to watch </p>
@@ -8,20 +8,20 @@ export const templateP = `
     <ul class="series-list"> <slot name = "PendingAdd"> </slot></ul>
     <section>
     <slot class = "anchor"> </slot>`;
+};
 
-esto = "vistas";
-
-export const templateW = `
+export const templateW = () => {
+    return `
     <section class = "series-watched">
     <h3> Pending Series </h3>
     <p> You have watched ${esto} series</p>
     <ul class="series-list"><slot name = "PendingAdd"> </slot> </ul>
     <section>
     `;
+};
 
-esto = "show";
-
-export const templateL = `
+export const templateL = () => {
+    return `
 
 <li class="serie">
 <img
@@ -35,3 +35,4 @@ alt = ${esto} poster
 
 <slot class = "anchor"> </slot>
 <slot class = "anchor2"> </slot>`;
+};

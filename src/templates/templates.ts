@@ -1,5 +1,5 @@
-const esto = "placeholder";
-
+let esto = "pendientes";
+let show = "";
 export const templateP = `
     <section class = "series-pending">
     <h3> Pending Series </h3>
@@ -9,20 +9,29 @@ export const templateP = `
     <section>
     <slot class = "anchor"> </slot>`;
 
+esto = "vistas";
+
 export const templateW = `
     <section class = "series-watched">
     <h3> Pending Series </h3>
     <p> You have watched ${esto} series</p>
     <ul class="series-list"><slot name = "PendingAdd"> </slot> </ul>
-    <section>`;
+    <section>
+    `;
+
+esto = "show";
 
 export const templateL = `
 
 <li class="serie">
 <img
 class="serie-poster"
-src = ${esto}
+src = ''
 alt = ${esto} poster 
 />
 <h4 class = 'serie__title'> ${esto} 
-</li></ul>`;
+<p class="serie__info">${esto}</p>
+</li></ul>
+
+<slot class = "anchor"> </slot>
+<slot class = "anchor2"> </slot>`;

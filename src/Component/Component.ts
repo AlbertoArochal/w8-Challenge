@@ -16,4 +16,15 @@ export abstract class Component {
         this.element = e;
         this.element.outerHTML = this.template;
     }
+
+    innRender(selector: string) {
+        const e = document.querySelector(selector);
+        if (e === null) return;
+        this.element = e;
+        this.element.outerHTML += this.template;
+    }
+
+    createTemplate(template: string) {
+        return template;
+    }
 }

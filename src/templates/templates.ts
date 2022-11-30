@@ -1,18 +1,27 @@
-let esto = "pendientes";
+export let esto = "pendientes";
+export type movie = {
+    id: number;
+    name: string;
+    creator: string;
+    year: number;
+    poster: string;
+    watched: boolean;
+    score: string;
+    emmies: number;
+};
 export const templateP = () => {
-    return `
+    return `                <section class="series">
+    <h2 class="section-title">Series list</h2>
     <section class = "series-pending">
     <h3> Pending Series </h3>
     <p> You have ${esto} series pending to watch </p>
 
     <ul class="series-list"> <slot name = "PendingAdd"> </slot></ul>
-    <section>
     <slot class = "anchor"> </slot>`;
 };
 
 export const templateW = () => {
-    return `
-    <section class = "series-watched">
+    return `</section>
     <h3> Pending Series </h3>
     <p> You have watched ${esto} series</p>
     <ul class="series-list"><slot name = "PendingAdd"> </slot> </ul>
@@ -20,17 +29,17 @@ export const templateW = () => {
     `;
 };
 
-export const templateL = () => {
+export const templateL = (item: object) => {
     return `
 
 <li class="serie">
 <img
 class="serie-poster"
-src = ''
-alt = ${esto} poster 
+src = '${item}'
+alt = ${item} poster 
 />
-<h4 class = 'serie__title'> ${esto} 
-<p class="serie__info">${esto}</p>
+<h4 class = 'serie__title'> ${item} 
+<p class="serie__info">${item}</p>
 </li></ul>
 
 <slot class = "anchor"> </slot>

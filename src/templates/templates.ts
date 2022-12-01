@@ -45,3 +45,13 @@ alt = ${item} poster
 <slot class = "anchor"> </slot>
 <slot class = "anchor2"> </slot>`;
 };
+
+export const templateContainer = () => {
+    return `
+    <section class="series">
+        <h2 class="section-title">Series list</h2>
+        <section class="series-pending"></section>
+        <section class="series-watched"></section>
+    </section>
+    `;
+};

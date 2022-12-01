@@ -1,11 +1,10 @@
-export const handleStar = (times: number) => {
+export const handleStar = (times) => {
     let starM = ` <li class="score__star">
     <i
         class="icon-score fas fa-star"
         title="1/5"
     ></i>
 </li>`;
-
     let template = "";
     switch (true) {
         case times === 0:
@@ -43,8 +42,7 @@ export const handleStar = (times: number) => {
     return `<ul class="score"> ${template}
     </ul>`;
 };
-
-export const counterW = (list: Array) => {
+export const counterW = (list) => {
     let counter = 0;
     list.forEach((show) => {
         if (show.watched === true) {
@@ -53,8 +51,7 @@ export const counterW = (list: Array) => {
     });
     return counter;
 };
-
-export const counterP = (list: Array) => {
+export const counterP = (list) => {
     let counter = 0;
     list.forEach((show) => {
         if (show.watched === false) {

@@ -50,5 +50,4 @@ export const series = [
         emmies: 0,
     },
 ].map((show) => ({ ...show }));
-
 export const initializeSeries = () => series;

@@ -1,4 +1,5 @@
-export const series = [
+"use strict";
+const series = [
     {
         id: 1,
         name: "The Sopranos",
@@ -44,11 +45,9 @@ export const series = [
         name: "Atypical",
         creator: "Robia Rashid",
         year: 2017,
-        poster: "https://m.media-amazon.com/images/I/51HnaW9myKL._AC_UF894,1000_QL80_.jpg",
+        poster: "https://www.cine.com/media/series/2711.jpg",
         watched: false,
         score: 0,
         emmies: 0,
     },
-].map((show) => ({ ...show }));
-
-export const initializeSeries = () => series;
+];

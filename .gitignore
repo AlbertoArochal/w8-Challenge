@@ -1,6 +1,5 @@
 .vscode/
 .husky/
-dist/**/*.js
 # Logs
 logs
 *.log

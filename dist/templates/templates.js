@@ -1,15 +1,5 @@
 export let esto = "pendientes";
-export type movie = {
-    id: number;
-    name: string;
-    creator: string;
-    year: number;
-    poster: string;
-    watched: boolean;
-    score: string;
-    emmies: number;
-};
-export const templateP = (callback: Function) => {
+export const templateP = (callback) => {
     return `                <section class="series">
     <h2 class="section-title">Series list</h2>
     <section class = "series-pending">
@@ -19,8 +9,7 @@ export const templateP = (callback: Function) => {
     <ul class="series-list"> <slot name = "PendingAdd"> </slot></ul>
     <slot class = "anchor"> </slot>`;
 };
-
-export const templateW = (callback: Function) => {
+export const templateW = (callback) => {
     return `</section>
     <h3> Pending Series </h3>
     <p> You have watched ${callback} series</p>
@@ -28,8 +17,7 @@ export const templateW = (callback: Function) => {
     <section>
     `;
 };
-
-export const templateL = (item: object) => {
+export const templateL = (item) => {
     return `
 
 <li class="serie">
@@ -45,7 +33,6 @@ alt = ${item} poster
 <slot class = "anchor"> </slot>
 <slot class = "anchor2"> </slot>`;
 };
-
 export const templateContainer = () => {
     return `
     <section class="series">
